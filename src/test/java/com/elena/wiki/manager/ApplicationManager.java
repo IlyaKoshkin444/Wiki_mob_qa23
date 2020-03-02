@@ -2,6 +2,7 @@ package com.elena.wiki.manager;
 
 import com.google.common.io.Files;
 import io.appium.java_client.AppiumDriver;
+import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -34,6 +35,7 @@ public class ApplicationManager {
 
     driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
+
     article = new ArticleHelper(driver);
 
   }
@@ -48,6 +50,12 @@ public class ApplicationManager {
 //    wd.getWindowHandles();
 //    wd.getWindowHandle();
 
+  }
+
+  public void skipWelcomePage() {
+    driver.findElement(By.xpath(
+            "//android.widget.TextView[@resource-id='org.wikipedia:id/fragment_onboarding_skip_button']"))
+            .click();
   }
 
 

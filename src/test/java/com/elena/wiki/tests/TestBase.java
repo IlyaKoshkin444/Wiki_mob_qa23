@@ -1,6 +1,5 @@
 package com.elena.wiki.tests;
 
-
 import com.elena.wiki.manager.ApplicationManager;
 import com.elena.wiki.utils.Listener;
 import org.slf4j.Logger;
